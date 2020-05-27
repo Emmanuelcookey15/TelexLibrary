@@ -1,0 +1,3 @@
+rootProject.name='Telex Library'
+include ':app', ':telexlibrariessupport'
+include ':telexlibraries'
