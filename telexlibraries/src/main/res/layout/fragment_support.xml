@@ -118,7 +118,8 @@
                 <Button
                     android:id="@+id/goto_knowledge_base"
                     android:layout_width="148dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
+                    android:background="#D2D7DF"
                     android:text="@string/knowledgebase"
                     android:textAllCaps="false"
                     android:layout_marginRight="5dp"
@@ -127,7 +128,7 @@
                 <Button
                     android:id="@+id/remain_open_ticket"
                     android:layout_width="148dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:text="@string/open_a_ticket"
                     android:background="#0652DD"
                     android:textColor="@android:color/white"
@@ -192,7 +193,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
+                android:src="@drawable/mail_image"
                 android:layout_marginRight="15dp"
                 android:layout_marginEnd="15dp" />
 
@@ -243,7 +244,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
+                android:src="@drawable/technical_image"
                 android:layout_marginRight="15dp"
                 android:layout_marginEnd="15dp" />
 
@@ -294,7 +295,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
+                android:src="@drawable/sales_image"
                 android:layout_marginRight="15dp"
                 android:layout_marginEnd="15dp" />
 

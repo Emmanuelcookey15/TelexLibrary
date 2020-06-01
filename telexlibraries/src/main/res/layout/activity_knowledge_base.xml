@@ -1,401 +1,412 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".KnowledgeBase">
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".KnowledgeBase">
 
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="133dp"
-        android:background="#0652DD"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="133dp"
+            android:background="#0652DD"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_can_we_help"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <LinearLayout
+                    android:id="@+id/technicals_profiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_one" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_two"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_three"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_four"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_five"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:layout_below="@+id/technicals_profiles">
+
+                    
+                    <Button
+                        android:id="@+id/remain_knowledge_base"
+                        android:layout_width="148dp"
+                        android:layout_height="40dp"
+                        android:text="@string/knowledgebase"
+                        android:background="#0652DD"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@android:color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginEnd="5dp" />
+
+                    <Button
+                        android:id="@+id/goto_open_ticket"
+                        android:layout_width="148dp"
+                        android:layout_height="40dp"
+                        android:background="#D2D7DF"
+                        android:text="@string/open_a_ticket"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/how_can_we_help"
-            android:gravity="center_horizontal"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            />
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/find_answers"
+            android:textColor="@color/telex_black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    </LinearLayout>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline">
-
-        <RelativeLayout
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/search_new_activity"
             android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/edit_border"
+            android:baselineAligned="true"
+            android:inputType="text"
+            android:padding="1dp"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:queryBackground="@android:color/transparent"
+            app:queryHint="Search for hotels and places"
+            app:searchIcon="@drawable/search_icon" />
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/walkthrough"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp">
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/search_new_activity">
 
-
-            <LinearLayout
-                android:id="@+id/technicals_profiles"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="5"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_one" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_two"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_three"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_four"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_five"
-                    />
-
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:layout_below="@+id/technicals_profiles"
+                android:padding="10dp"
                 >
 
+                <ImageView
+                    android:id="@+id/walkthrough_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/walkthrough_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-                <Button
-                    android:id="@+id/remain_knowledge_base"
-                    android:layout_width="148dp"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/knowledgebase"
-                    android:background="#0652DD"
-                    android:layout_marginRight="5dp"
-                    android:textColor="@android:color/white"
-                    android:textAllCaps="false"
-                    android:layout_marginEnd="5dp" />
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/walkthrough_image"
+                    android:text="Walkthroughs"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/walkthrough_image" />
 
-                <Button
-                    android:id="@+id/goto_open_ticket"
-                    android:layout_width="148dp"
+                <ImageView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/open_a_ticket"
-                    android:textAllCaps="false"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginStart="5dp"
-                    />
+                    android:src="@drawable/ic_expand_more_black"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
 
-            </LinearLayout>
-
-        </RelativeLayout>
+            </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
-
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="100dp" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:text="@string/find_answers"
-        android:textColor="@color/telex_black"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
-
-
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/search_new_activity"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:background="@drawable/edit_border"
-        android:baselineAligned="true"
-        android:inputType="text"
-        android:padding="1dp"
-        app:iconifiedByDefault="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:queryBackground="@android:color/transparent"
-        app:queryHint="Search for hotels and places"
-        app:searchIcon="@drawable/search_icon" />
+        </androidx.cardview.widget.CardView>
 
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/walkthrough"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/search_new_activity">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/billing"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/walkthrough">
 
-            <ImageView
-                android:id="@+id/walkthrough_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/walkthrough_image"
-                android:text="Walkthroughs"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/walkthrough_image" />
+                android:padding="10dp"
+                >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_expand_more_black"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                <ImageView
+                    android:id="@+id/billing_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/billing_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/billing_image"
+                    android:text="Billing and Payments"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/billing_image" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand_more_black"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/billing"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/walkthrough">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/your_order"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/billing">
 
-            <ImageView
-                android:id="@+id/billing_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/billing_image"
-                android:text="Billing and Payments"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/billing_image" />
+                android:padding="10dp"
+                >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_expand_more_black"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                <ImageView
+                    android:id="@+id/your_order_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/your_order_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/your_order_image"
+                    android:text="Billing and Payments"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/your_order_image" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand_more_black"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
-    </androidx.cardview.widget.CardView>
 
-
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/your_order"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/billing">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/shipping"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/your_order">
 
-            <ImageView
-                android:id="@+id/your_order_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/your_order_image"
-                android:text="Billing and Payments"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/your_order_image" />
+                android:padding="10dp"
+                >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_expand_more_black"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                <ImageView
+                    android:id="@+id/shipping_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/shipping_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/shipping_image"
+                    android:text="Shipping"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/shipping_image" />
 
-    </androidx.cardview.widget.CardView>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_expand_more_black"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
 
+            </RelativeLayout>
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/shipping"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/your_order">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
-
-            <ImageView
-                android:id="@+id/shipping_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/customer_service_five"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/shipping_image"
-                android:text="Shipping"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/shipping_image" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_expand_more_black"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
-
-        </RelativeLayout>
-
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</ScrollView>
+
+
