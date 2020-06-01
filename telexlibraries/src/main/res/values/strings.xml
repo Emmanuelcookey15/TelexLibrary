@@ -2,4 +2,16 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_intro">If you can\'t find a solution in our knowledge base, you can submit a ticket below.</string>
+    <string name="customer_support_image">dummy image for a possible customer support</string>
+    <string name="knowledgebase">Knowledgebase</string>
+    <string name="open_a_ticket">Open a ticket</string>
+    <string name="technical_problem">Technical Problem</string>
+    <string name="problem_description_txt">Describe the problem you are having</string>
+    <string name="request_urgency">How urgent is the request?</string>
+    <string name="no_file_choosen">No file choosen</string>
+    <string name="choose_file">Choose file</string>
+    <string name="how_can_we_help">How can we help?</string>
+    <string name="find_answers">Find answers to common question</string>
+    <string name="agree">ok</string>
 </resources>

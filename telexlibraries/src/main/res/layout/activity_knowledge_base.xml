@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SupportFragment">
+    tools:context=".KnowledgeBase">
 
 
     <LinearLayout
@@ -17,7 +17,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -27,7 +26,6 @@
             android:textStyle="bold"
             android:textColor="@android:color/white"
             />
-
 
     </LinearLayout>
 
@@ -45,13 +43,13 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline">
-        
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
-            
-            
+
+
             <LinearLayout
                 android:id="@+id/technicals_profiles"
                 android:layout_width="match_parent"
@@ -97,10 +95,10 @@
                     android:contentDescription="@string/customer_support_image"
                     android:src="@drawable/customer_service_five"
                     />
-                
-                
+
+
             </LinearLayout>
-            
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -116,34 +114,33 @@
 
 
                 <Button
-                    android:id="@+id/goto_knowledge_base"
+                    android:id="@+id/remain_knowledge_base"
                     android:layout_width="148dp"
                     android:layout_height="wrap_content"
                     android:text="@string/knowledgebase"
-                    android:textAllCaps="false"
+                    android:background="#0652DD"
                     android:layout_marginRight="5dp"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
                     android:layout_marginEnd="5dp" />
 
                 <Button
-                    android:id="@+id/remain_open_ticket"
+                    android:id="@+id/goto_open_ticket"
                     android:layout_width="148dp"
                     android:layout_height="wrap_content"
                     android:text="@string/open_a_ticket"
-                    android:background="#0652DD"
-                    android:textColor="@android:color/white"
                     android:textAllCaps="false"
                     android:layout_marginLeft="5dp"
                     android:layout_marginStart="5dp"
                     />
 
             </LinearLayout>
-            
+
         </RelativeLayout>
-        
-        
-        
-        
+
+
     </androidx.cardview.widget.CardView>
+
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
@@ -158,18 +155,43 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:text="@string/text_intro"
-        android:textColor="#333333"
+        android:text="@string/find_answers"
+        android:textColor="@color/telex_black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/search_new_activity"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edit_border"
+        android:baselineAligned="true"
+        android:inputType="text"
+        android:padding="1dp"
+        app:iconifiedByDefault="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:queryBackground="@android:color/transparent"
+        app:queryHint="Search for hotels and places"
+        app:searchIcon="@drawable/search_icon" />
+
+
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/general_enquiry"
+        android:id="@+id/walkthrough"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
@@ -179,7 +201,7 @@
         android:layout_marginRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/search_new_activity">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -188,7 +210,7 @@
             >
 
             <ImageView
-                android:id="@+id/mail_image"
+                android:id="@+id/walkthrough_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:contentDescription="@string/customer_support_image"
@@ -200,15 +222,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/mail_image"
-                android:text="General Enquiry"
+                android:layout_toRightOf="@+id/walkthrough_image"
+                android:text="Walkthroughs"
                 android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/mail_image" />
+                android:layout_toEndOf="@+id/walkthrough_image" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:src="@drawable/ic_expand_more_black"
                 android:layout_centerInParent="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true" />
@@ -218,19 +240,20 @@
 
     </androidx.cardview.widget.CardView>
 
+
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/technical_problem"
+        android:id="@+id/billing"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/general_enquiry">
-
+        app:layout_constraintTop_toBottomOf="@+id/walkthrough">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -239,7 +262,7 @@
             >
 
             <ImageView
-                android:id="@+id/technical_image"
+                android:id="@+id/billing_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:contentDescription="@string/customer_support_image"
@@ -251,15 +274,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/technical_image"
-                android:text="Technical Problem"
+                android:layout_toRightOf="@+id/billing_image"
+                android:text="Billing and Payments"
                 android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/technical_image" />
+                android:layout_toEndOf="@+id/billing_image" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:src="@drawable/ic_expand_more_black"
                 android:layout_centerInParent="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true" />
@@ -269,18 +292,20 @@
 
     </androidx.cardview.widget.CardView>
 
+
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/sales_problem"
+        android:id="@+id/your_order"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/technical_problem">
+        app:layout_constraintTop_toBottomOf="@+id/billing">
 
 
         <RelativeLayout
@@ -290,7 +315,7 @@
             >
 
             <ImageView
-                android:id="@+id/sales_image"
+                android:id="@+id/your_order_image"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:contentDescription="@string/customer_support_image"
@@ -302,22 +327,75 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/sales_image"
-                android:text="Sales Problem"
+                android:layout_toRightOf="@+id/your_order_image"
+                android:text="Billing and Payments"
                 android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/sales_image" />
+                android:layout_toEndOf="@+id/your_order_image" />
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp"
+                android:src="@drawable/ic_expand_more_black"
                 android:layout_centerInParent="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true" />
 
         </RelativeLayout>
 
+    </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/shipping"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/your_order">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/shipping_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="@string/customer_support_image"
+                android:src="@drawable/customer_service_five"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@+id/shipping_image"
+                android:text="Shipping"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@+id/shipping_image" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_expand_more_black"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
 
     </androidx.cardview.widget.CardView>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

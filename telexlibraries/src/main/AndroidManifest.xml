@@ -3,7 +3,9 @@
     package="ng.hotels.telexlibraries">
 
     <application>
-        <activity android:name=".SupportActivity"></activity>
+        <activity android:name=".KnowledgeBase"></activity>
+        <activity android:name=".TechnicalProblems" />
+        <activity android:name=".SupportActivity" />
     </application>
 
 </manifest>
