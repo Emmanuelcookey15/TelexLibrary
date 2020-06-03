@@ -187,6 +187,65 @@
                 android:padding="15dp"
                 >
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/full_name_txt"
+                    android:textSize="16sp"
+                    android:textColor="@color/telex_black"
+                    android:layout_marginBottom="10dp"
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/user_full_name_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="25dp">
+
+                    <EditText
+                        android:id="@+id/user_first_name"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_marginRight="15dp"
+                        android:hint="@string/first_name"
+                        android:background="@drawable/edit_border"
+                        android:layout_marginEnd="15dp"
+                        android:maxLines="1"/>
+
+                    <EditText
+                        android:id="@+id/user_last_name"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_border"
+                        android:hint="@string/last_name"
+                        android:maxLines="1"/>
+
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textSize="16sp"
+                    android:textColor="@color/telex_black"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <EditText
+                    android:id="@+id/user_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/edit_border"
+                    android:layout_marginBottom="25dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    />
+
 
                 <TextView
                     android:layout_width="match_parent"
@@ -198,7 +257,7 @@
                     />
 
                 <EditText
-                    android:id="@+id/problem_description"
+                    android:id="@+id/problem_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_border"

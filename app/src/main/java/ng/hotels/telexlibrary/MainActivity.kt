@@ -3,8 +3,6 @@ package ng.hotels.telexlibrary
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.activity_main.*
-import ng.hotels.telexlibraries.SupportFragment
 import ng.hotels.telexlibraries.TelexManager
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val t = TelexManager(this)
-            .setDevelopersEmail("emmanuelcookey744@gmail.com")
+            .setOrganization("eec-inc--0bb742b")
+            .setTeam("superheros")
             .setFrameLayout(R.id.frame_layout)
             .initializeAsFragment()
 

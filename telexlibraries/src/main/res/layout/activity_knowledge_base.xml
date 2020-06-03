@@ -115,7 +115,7 @@
                     android:paddingEnd="18dp"
                     android:layout_below="@+id/technicals_profiles">
 
-                    
+
                     <Button
                         android:id="@+id/remain_knowledge_base"
                         android:layout_width="148dp"

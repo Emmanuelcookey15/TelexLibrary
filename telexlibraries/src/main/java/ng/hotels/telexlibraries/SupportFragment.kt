@@ -56,6 +56,7 @@ class SupportFragment : Fragment() {
             val intentKnowledgeBase = Intent(activity, KnowledgeBase::class.java)
             startActivity(intentKnowledgeBase)
             activity?.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+            //onSNACK(it, "This feature is not yet available")
         }
 
         remain_open_ticket.setOnClickListener {
@@ -88,16 +89,7 @@ class SupportFragment : Fragment() {
 
     private fun onSNACK(view: View, str: String){
         //Snackbar(view)
-        val snackbar = Snackbar.make(view, str,
-            Snackbar.LENGTH_LONG).setAction("Action", null)
-        snackbar.setActionTextColor(Color.BLUE)
-        val snackbarView = snackbar.view
-        snackbarView.setBackgroundColor(Color.LTGRAY)
-        val textView =
-            snackbarView.findViewById(R.id.snackbar_text) as TextView
-        textView.setTextColor(Color.BLUE)
-        textView.textSize = 28f
-        snackbar.show()
+        Snackbar.make(view, str, Snackbar.LENGTH_LONG).show()
     }
 
     companion object {

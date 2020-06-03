@@ -14,4 +14,8 @@
     <string name="how_can_we_help">How can we help?</string>
     <string name="find_answers">Find answers to common question</string>
     <string name="agree">ok</string>
+    <string name="email">Email</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="full_name_txt">Full Name</string>
 </resources>

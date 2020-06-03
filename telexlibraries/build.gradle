@@ -38,9 +38,17 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
+
     implementation "com.google.android.material:material:1.2.0-alpha06"
     implementation "com.google.android.material:material:1.2.0-alpha06"
     implementation "com.afollestad.material-dialogs:core:3.1.1"
+
+    //Dependency for retrofit library
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.1'
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.4.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.4.0'
 
 
 }

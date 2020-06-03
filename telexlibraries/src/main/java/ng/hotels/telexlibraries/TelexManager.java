@@ -5,17 +5,23 @@ import android.content.Intent;
 import android.util.Log;
 
 import androidx.fragment.app.FragmentActivity;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 public class TelexManager {
 
     private Activity activity;
-    private String developersEmail;
+    private String organization;
+    private String team;
     private int theme = R.style.DefaultTheme;
     private int frameLayout = 0;
 
     public static String TELEX = "telex";
+
+    public static String organizations;
+
+    public static String teams;
+
+
 
     public TelexManager(Activity activity) {
         this.activity = activity;
@@ -42,7 +48,6 @@ public class TelexManager {
             FragmentTransaction transaction = ((FragmentActivity)activity).getSupportFragmentManager().beginTransaction();
             transaction.replace(frameLayout, new SupportFragment())
                     .commitNow();
-
         } else {
             Log.d(TELEX, "Context is required!");
         }
@@ -51,8 +56,15 @@ public class TelexManager {
 
 
 
-    public TelexManager setDevelopersEmail(String developersEmail) {
-        this.developersEmail = developersEmail;
+    public TelexManager setOrganization(String organization) {
+        this.organization = organization;
+        organizations = organization;
+        return this;
+    }
+
+    public TelexManager setTeam(String team) {
+        this.team = team;
+        teams = team;
         return this;
     }
 
@@ -68,8 +80,8 @@ public class TelexManager {
 
 
 
-    public String getDevelopersEmail() {
-        return developersEmail;
+    public String getOrganization() {
+        return organization;
     }
 
     public int getTheme() {
@@ -79,4 +91,9 @@ public class TelexManager {
     public int getFrameLayout() {
         return frameLayout;
     }
+
+    public String getTeam() {
+        return this.team;
+    }
+
 }
