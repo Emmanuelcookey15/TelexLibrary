@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     >
 
 
@@ -26,12 +27,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/how_can_we_help"
                 android:gravity="center_horizontal"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                android:text="@string/how_can_we_help"
                 android:textColor="@android:color/white"
-                />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -43,8 +43,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            app:cardElevation="4dp"
             app:cardCornerRadius="7dp"
+            app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,8 +60,8 @@
                     android:id="@+id/technicals_profiles"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="5"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:weightSum="5">
 
                     <ImageView
                         android:layout_width="40dp"
@@ -75,32 +75,28 @@
                         android:layout_height="40dp"
                         android:layout_weight="1"
                         android:contentDescription="@string/customer_support_image"
-                        android:src="@drawable/customer_service_two"
-                        />
+                        android:src="@drawable/customer_service_two" />
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_weight="1"
                         android:contentDescription="@string/customer_support_image"
-                        android:src="@drawable/customer_service_three"
-                        />
+                        android:src="@drawable/customer_service_three" />
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_weight="1"
                         android:contentDescription="@string/customer_support_image"
-                        android:src="@drawable/customer_service_four"
-                        />
+                        android:src="@drawable/customer_service_four" />
 
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_weight="1"
                         android:contentDescription="@string/customer_support_image"
-                        android:src="@drawable/customer_service_five"
-                        />
+                        android:src="@drawable/customer_service_five" />
 
 
                 </LinearLayout>
@@ -109,30 +105,27 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:weightSum="2"
-                    android:orientation="horizontal"
-                    android:gravity="center"
+                    android:layout_below="@+id/technicals_profiles"
                     android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:paddingStart="18dp"
                     android:paddingEnd="18dp"
-                    android:layout_below="@+id/technicals_profiles"
-                    >
+                    android:weightSum="2">
 
                     <Button
                         android:id="@+id/moveto_knowledge_base"
                         android:layout_width="148dp"
                         android:layout_height="wrap_content"
                         android:text="@string/knowledgebase"
-                        android:textAllCaps="false"
-                        />
+                        android:textAllCaps="false" />
 
                     <Button
                         android:id="@+id/moveto_open_ticket"
                         android:layout_width="148dp"
                         android:layout_height="wrap_content"
                         android:text="@string/open_a_ticket"
-                        android:textAllCaps="false"
-                        />
+                        android:textAllCaps="false" />
 
                 </LinearLayout>
 
@@ -179,22 +172,19 @@
             app:layout_constraintTop_toBottomOf="@+id/technical_problem_header">
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="15dp"
-                >
+                android:padding="15dp">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/full_name_txt"
-                    android:textSize="16sp"
-                    android:textColor="@color/telex_black"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:text="@string/full_name_txt"
+                    android:textColor="@color/telex_black"
+                    android:textSize="16sp" />
 
 
                 <LinearLayout
@@ -207,12 +197,12 @@
                         android:id="@+id/user_first_name"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:layout_marginRight="15dp"
-                        android:hint="@string/first_name"
-                        android:background="@drawable/edit_border"
                         android:layout_marginEnd="15dp"
-                        android:maxLines="1"/>
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edit_border"
+                        android:hint="@string/first_name"
+                        android:maxLines="1" />
 
                     <EditText
                         android:id="@+id/user_last_name"
@@ -221,7 +211,7 @@
                         android:layout_weight="1"
                         android:background="@drawable/edit_border"
                         android:hint="@string/last_name"
-                        android:maxLines="1"/>
+                        android:maxLines="1" />
 
 
                 </LinearLayout>
@@ -230,120 +220,110 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/email"
-                    android:textSize="16sp"
-                    android:textColor="@color/telex_black"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:text="@string/email"
+                    android:textColor="@color/telex_black"
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/user_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edit_border"
                     android:layout_marginBottom="25dp"
+                    android:background="@drawable/edit_border"
                     android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    />
+                    android:maxLines="1" />
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/problem_description_txt"
-                    android:textSize="16sp"
-                    android:textColor="@color/telex_black"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:text="@string/problem_description_txt"
+                    android:textColor="@color/telex_black"
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/problem_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/edit_border"
                     android:layout_marginBottom="25dp"
+                    android:background="@drawable/edit_border"
                     android:inputType="text"
-                    android:maxLines="1"
-                    />
+                    android:maxLines="1" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Give us the details"
-                    android:textSize="16sp"
-                    android:textColor="@color/telex_black"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:text="Give us the details"
+                    android:textColor="@color/telex_black"
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/details_of_problem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="textMultiLine"
+                    android:layout_marginBottom="25dp"
                     android:background="@drawable/edit_border"
-                    android:hint="Please Describe Issue"
                     android:gravity="top"
+                    android:hint="Please Describe Issue"
+                    android:inputType="textMultiLine"
                     android:lines="8"
                     android:maxLines="10"
-                    android:minLines="6"
-                    android:layout_marginBottom="25dp"
-                    />
+                    android:minLines="6" />
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/request_urgency"
-                    android:textSize="16sp"
-                    android:textColor="@color/telex_black"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:text="@string/request_urgency"
+                    android:textColor="@color/telex_black"
+                    android:textSize="16sp" />
 
 
                 <Spinner
                     android:id="@+id/urgency_spinner"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:prompt="@string/knowledgebase"
                     android:layout_marginBottom="25dp"
-                    />
+                    android:prompt="@string/knowledgebase" />
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Attach a file, screenshot or document"
-                    android:textSize="16sp"
-                    android:textColor="@color/telex_black"
                     android:layout_marginBottom="10dp"
-                    />
+                    android:text="Attach a file, screenshot or document"
+                    android:textColor="@color/telex_black"
+                    android:textSize="16sp" />
 
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="25dp">
+                    android:layout_marginBottom="25dp"
+                    android:orientation="horizontal">
 
 
                     <Button
                         android:id="@+id/choose_file"
                         android:layout_width="148dp"
                         android:layout_height="wrap_content"
-                        android:text="@string/choose_file"
-                        android:textAllCaps="false"
+                        android:layout_marginEnd="15dp"
                         android:layout_marginRight="15dp"
-                        android:layout_marginEnd="15dp" />
+                        android:text="@string/choose_file"
+                        android:textAllCaps="false" />
 
                     <TextView
                         android:id="@+id/choose_file_txt"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/no_file_choosen"
-                        android:textSize="14sp"
-                        android:textColor="@color/telex_black"
                         android:layout_marginBottom="10dp"
-                        />
+                        android:text="@string/no_file_choosen"
+                        android:textColor="@color/telex_black"
+                        android:textSize="14sp" />
 
                 </LinearLayout>
 
@@ -352,12 +332,12 @@
                     android:id="@+id/send_message"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Send Message"
-                    android:background="#0652DD"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
+                    android:layout_marginEnd="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginEnd="15dp" />
+                    android:background="#0652DD"
+                    android:text="Send Message"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 

@@ -1,324 +1,336 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SupportFragment">
+    android:fillViewport="true">
 
 
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="133dp"
-        android:background="#0652DD"
-        android:gravity="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".SupportFragment">
 
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="133dp"
+            android:background="#0652DD"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/how_can_we_help"
+                android:gravity="center_horizontal"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                />
+
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:cardElevation="4dp"
+            app:cardCornerRadius="7dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+                <LinearLayout
+                    android:id="@+id/technicals_profiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="5"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_one" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_two"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_three"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_four"
+                        />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:contentDescription="@string/customer_support_image"
+                        android:src="@drawable/customer_service_five"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:paddingStart="18dp"
+                    android:paddingEnd="18dp"
+                    android:layout_below="@+id/technicals_profiles"
+                    >
+
+
+                    <Button
+                        android:id="@+id/goto_knowledge_base"
+                        android:layout_width="148dp"
+                        android:layout_height="40dp"
+                        android:background="#D2D7DF"
+                        android:text="@string/knowledgebase"
+                        android:textAllCaps="false"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginEnd="5dp" />
+
+                    <Button
+                        android:id="@+id/remain_open_ticket"
+                        android:layout_width="148dp"
+                        android:layout_height="40dp"
+                        android:text="@string/open_a_ticket"
+                        android:background="#0652DD"
+                        android:textColor="@android:color/white"
+                        android:textAllCaps="false"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="100dp" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/textView"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="@string/how_can_we_help"
-            android:gravity="center_horizontal"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:textColor="@android:color/white"
-            />
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/text_intro"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-
-    </LinearLayout>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:cardElevation="4dp"
-        app:cardCornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/guideline">
-        
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/general_enquiry"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp">
-            
-            
-            <LinearLayout
-                android:id="@+id/technicals_profiles"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="5"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_one" />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_two"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_three"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_four"
-                    />
-
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/customer_support_image"
-                    android:src="@drawable/customer_service_five"
-                    />
-                
-                
-            </LinearLayout>
-            
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="10dp"
-                android:paddingStart="18dp"
-                android:paddingEnd="18dp"
-                android:layout_below="@+id/technicals_profiles"
+                android:padding="10dp"
                 >
 
+                <ImageView
+                    android:id="@+id/mail_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/mail_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-                <Button
-                    android:id="@+id/goto_knowledge_base"
-                    android:layout_width="148dp"
-                    android:layout_height="40dp"
-                    android:background="#D2D7DF"
-                    android:text="@string/knowledgebase"
-                    android:textAllCaps="false"
-                    android:layout_marginRight="5dp"
-                    android:layout_marginEnd="5dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/mail_image"
+                    android:text="General Enquiry"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/mail_image" />
 
-                <Button
-                    android:id="@+id/remain_open_ticket"
-                    android:layout_width="148dp"
-                    android:layout_height="40dp"
-                    android:text="@string/open_a_ticket"
-                    android:background="#0652DD"
-                    android:textColor="@android:color/white"
-                    android:textAllCaps="false"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginStart="5dp"
-                    />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
 
-            </LinearLayout>
-            
-        </RelativeLayout>
-        
-        
-        
-        
-    </androidx.cardview.widget.CardView>
+            </RelativeLayout>
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="100dp" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        android:text="@string/text_intro"
-        android:textColor="#333333"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/general_enquiry"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/technical_problem"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general_enquiry">
 
-            <ImageView
-                android:id="@+id/mail_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/mail_image"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/mail_image"
-                android:text="General Enquiry"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/mail_image" />
+                android:padding="10dp"
+                >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                <ImageView
+                    android:id="@+id/technical_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/technical_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/technical_image"
+                    android:text="Technical Problem"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/technical_image" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
+
+            </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/technical_problem"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/general_enquiry">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/sales_problem"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginRight="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/technical_problem">
 
-            <ImageView
-                android:id="@+id/technical_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/technical_image"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <RelativeLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/technical_image"
-                android:text="Technical Problem"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/technical_image" />
+                android:padding="10dp"
+                >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
+                <ImageView
+                    android:id="@+id/sales_image"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:contentDescription="@string/customer_support_image"
+                    android:src="@drawable/sales_image"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginEnd="15dp" />
 
-        </RelativeLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_toRightOf="@+id/sales_image"
+                    android:text="Sales Problem"
+                    android:textColor="@android:color/black"
+                    android:layout_toEndOf="@+id/sales_image" />
 
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    android:layout_centerInParent="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true" />
 
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/sales_problem"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginRight="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/technical_problem">
-
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            >
-
-            <ImageView
-                android:id="@+id/sales_image"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:contentDescription="@string/customer_support_image"
-                android:src="@drawable/sales_image"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:layout_toRightOf="@+id/sales_image"
-                android:text="Sales Problem"
-                android:textColor="@android:color/black"
-                android:layout_toEndOf="@+id/sales_image" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_chevron_right_black_24dp"
-                android:layout_centerInParent="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true" />
-
-        </RelativeLayout>
+            </RelativeLayout>
 
 
-    </androidx.cardview.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</ScrollView>
+
+
