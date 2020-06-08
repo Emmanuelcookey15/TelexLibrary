@@ -12,8 +12,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val t = TelexManager(this)
-            .setOrganization("eec-inc--0bb742b")
-            .setTeam("superheros")
+            .setOrganization("mark-essien-inc-b-447199")
+            .setTechnicalTeam("management-team")
+            .setGeneralTeam("hotels.ng-customer-support")
+            .setSalesTeam("corporate-sales")
             .setFrameLayout(R.id.frame_layout)
             .initializeAsFragment()
 

@@ -19,7 +19,7 @@ class SupportActivity : AppCompatActivity() {
         goto_knowledge_base.setOnClickListener {
             val intentKnowledgeBase = Intent(this, KnowledgeBase::class.java)
             startActivity(intentKnowledgeBase)
-            overridePendingTransition(R.anim.slide_out_left, R.anim.slide_in_right)
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
             //onSNACK(it, "This feature is not yet available")
         }
 

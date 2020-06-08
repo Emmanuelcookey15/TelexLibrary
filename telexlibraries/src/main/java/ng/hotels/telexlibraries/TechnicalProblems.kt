@@ -5,11 +5,8 @@ import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
-import android.net.NetworkInfo
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.provider.MediaStore
 import android.text.TextUtils
 import android.util.Log
 import android.view.View
@@ -56,11 +53,35 @@ class TechnicalProblems : AppCompatActivity() {
 
 
         val organiztion = TelexManager.organizations
-        val team = TelexManager.teams
-
         val gottenIntent = intent.getStringExtra("ticketType")
 
+        val team = when (gottenIntent) {
+            "General Enquiry" -> {
+                TelexManager.generalTeams
+            }
+            "Technical Problem" -> {
+                TelexManager.technicalTeams
+            }
+            else -> {
+                TelexManager.salesTeams
+            }
+        }
+
         technical_problem_header.text = gottenIntent
+
+
+        moveto_knowledge_base.setOnClickListener {
+            val intentKnowledgeBase = Intent(this, KnowledgeBase::class.java)
+            startActivity(intentKnowledgeBase)
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        }
+
+
+        moveto_open_ticket.setOnClickListener {
+            finish()
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        }
+
 
         val urgency = ArrayList<String>()
         urgency.add("High")
@@ -77,8 +98,7 @@ class TechnicalProblems : AppCompatActivity() {
 
         urgency_spinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener{
             override fun onNothingSelected(p0: AdapterView<*>?) {
-
-
+                
             }
 
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {

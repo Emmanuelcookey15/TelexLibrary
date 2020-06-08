@@ -45,16 +45,6 @@ class KnowledgeBase : AppCompatActivity() {
 
 
     private fun onSNACK(view: View, str: String){
-        //Snackbar(view)
-        val snackbar = Snackbar.make(view, str,
-            Snackbar.LENGTH_LONG).setAction("Action", null)
-        snackbar.setActionTextColor(Color.BLUE)
-        val snackbarView = snackbar.view
-        snackbarView.setBackgroundColor(Color.LTGRAY)
-        val textView =
-            snackbarView.findViewById(R.id.snackbar_text) as TextView
-        textView.setTextColor(Color.BLUE)
-        textView.textSize = 28f
-        snackbar.show()
+        Snackbar.make(view, str, Snackbar.LENGTH_LONG).show()
     }
 }

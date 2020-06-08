@@ -3,6 +3,7 @@ package ng.hotels.telexlibraries;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Switch;
 
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentTransaction;
@@ -11,7 +12,9 @@ public class TelexManager {
 
     private Activity activity;
     private String organization;
-    private String team;
+    private String generalTeam;
+    private String technicalTeam;
+    private String salesTeam;
     private int theme = R.style.DefaultTheme;
     private int frameLayout = 0;
 
@@ -19,7 +22,11 @@ public class TelexManager {
 
     public static String organizations;
 
-    public static String teams;
+    public static String technicalTeams;
+
+    public static String generalTeams;
+
+    public static String salesTeams;
 
 
 
@@ -43,13 +50,14 @@ public class TelexManager {
 
     public void initializeAsFragment() {
 
-        if (activity != null) {
+
+        if (activity != null & salesTeam != null & technicalTeam != null & generalTeam != null) {
 
             FragmentTransaction transaction = ((FragmentActivity)activity).getSupportFragmentManager().beginTransaction();
             transaction.replace(frameLayout, new SupportFragment())
                     .commitNow();
         } else {
-            Log.d(TELEX, "Context is required!");
+            Log.d(TELEX, "Parameters like context and various teams are required!");
         }
 
     }
@@ -62,16 +70,30 @@ public class TelexManager {
         return this;
     }
 
-    public TelexManager setTeam(String team) {
-        this.team = team;
-        teams = team;
+    public TelexManager setTechnicalTeam(String technicalTeam) {
+        this.technicalTeam = technicalTeam;
+        technicalTeams = technicalTeam;
         return this;
     }
+
+    public TelexManager setGeneralTeam(String generalTeam) {
+        this.generalTeam = generalTeam;
+        generalTeams = generalTeam;
+        return this;
+    }
+
+    public TelexManager setSalesTeam(String salesTeam) {
+        this.salesTeam = salesTeam;
+        salesTeams = salesTeam;
+        return this;
+    }
+
 
     public TelexManager setTheme(int theme) {
         this.theme = theme;
         return this;
     }
+
 
     public TelexManager setFrameLayout(int frameLayout) {
         this.frameLayout = frameLayout;
@@ -92,8 +114,8 @@ public class TelexManager {
         return frameLayout;
     }
 
-    public String getTeam() {
-        return this.team;
+    public String getTechnicalTeam() {
+        return this.technicalTeam;
     }
 
 }
